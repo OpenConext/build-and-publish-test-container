@@ -5,4 +5,7 @@ APP_ENV=test composer install --prefer-dist --ignore-platform-reqs --no-interact
 echo "Run yarn install"
 yarn install
 yarn encore production
-composer archive output --no-interaction
+echo "Create an archive"
+composer archive -f output --no-interaction
+echo "Add directories needed for test to the archive"
+tar -rvf output.tar dev/
