@@ -1,6 +1,8 @@
 #!/bin/sh -l
 DIR_TO_INCLUDE=$1
 USE_YARN=$2
+echo USE_YARN= $USE_YARN
+echo DIR_TO_INCLUDE = $DIR_TO_INCLUDE
 echo "Run composer install"
 APP_ENV=test composer install --prefer-dist --ignore-platform-reqs --no-interaction
 
