@@ -1,0 +1,14 @@
+name: 'Build Stepup Test Docker image using php82 and node20'
+description: 'Builds a Stepup app for running tests'
+inputs:
+  dir_to_include: 
+    description: 'Add the directory where the tests are located'
+    default: 'tests/'
+  use_yarn: 
+     description: 'whether this project uses yarn'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.dir_to_include }}"
+    - ${{ inputs.use_yarn }}"
