@@ -1,0 +1,5 @@
+name: 'Build Stepup Test Docker image'
+description: 'Builds a Stepup app for running tests'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
