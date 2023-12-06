@@ -1,4 +1,5 @@
 #!/bin/sh -l
+. component_info
 echo "Run composer install"
 composer install --prefer-dist --ignore-platform-reqs --no-interaction
 
@@ -14,4 +15,4 @@ echo "Create an archive"
 composer archive --file output --no-interaction
 
 echo "Add directories needed for test to the archive"
-tar -rvf output.tar ${INPUT_DIR_TO_INCLUDE}
+tar -rvf output.tar "${TEST_EXTRA_DIRS}"
