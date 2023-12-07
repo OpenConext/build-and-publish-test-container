@@ -1,5 +1,6 @@
 #!/bin/sh -l
 . ./component_info
+export APP_ENV=test
 echo "Run composer install"
 composer install --prefer-dist --ignore-platform-reqs --no-interaction
 
