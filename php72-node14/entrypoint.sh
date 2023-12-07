@@ -6,8 +6,8 @@ composer install --prefer-dist --ignore-platform-reqs --no-interaction
 
 if [ "$INPUT_USE_YARN" = "true" ]; then
 	echo "Running yarn install and yarn encore install..."
-	yarn install
-	yarn encore production
+	/usr/local/bin/yarn install
+	/usr/local/bin/yarn encore production
 else
 	echo "Skipping yarn install and yarn encore install..."
 fi
