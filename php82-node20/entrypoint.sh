@@ -16,5 +16,4 @@ echo "Create an archive"
 composer archive --file output --format zip --no-interaction
 
 echo "Add directories needed for test to the archive"
-tar --format ustar -rvf output.tar ${TEST_EXTRA_DIRS}
 zip -ur output.zip ${TEST_EXTRA_DIRS}
