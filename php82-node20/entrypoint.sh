@@ -16,4 +16,4 @@ echo "Create an archive"
 composer archive --file output --no-interaction
 
 echo "Add directories needed for test to the archive"
-tar --posix -rvf output.tar ${TEST_EXTRA_DIRS}
+tar --format ustar -rvf output.tar ${TEST_EXTRA_DIRS}
